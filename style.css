@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background: linear-gradient(270deg, #ffa600b6, #0000ffbe);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 100dvh;
+}
+
+p {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 15px;
+}
+.calculator {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 60px 1fr;
+    width: 70%;
+    max-width: 400px;
+    height: 400px;
+    gap: 8px;
+    background: #f5f5f51e;
+    backdrop-filter: blur(100px);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.screen {
+    grid-column: 1 / -1;
+    background: inherit;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.tripl,.dou {
+    grid-column: 1 / -1;
+    background: orange;
+}
+
+.oprators {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.oprators button {
+    background: rgb(0, 138, 108);
+}
+
+.dou {
+    background: wheat !important;
+}
+
+.del,.back {
+    background: rgb(211, 77, 0) !important;
+}
+
+button:hover {
+    background-color: wheat;
+}
+
+.oprators button:hover {
+    background-color: aquamarine;
+}
+
+.tripl:hover {
+    background-color: #ffc400;
+}
+
+.dou:hover {
+    background-color: rgb(241, 200, 123) !important;
+}
+
+.del:hover,.back:hover {
+    background: rgb(255, 94, 0) !important;
+}
+
+@media (max-width:500px) {
+    .calculator {
+        width: 95%;
+    }
+    p {
+        font-size: 10px;
+    }
+}
