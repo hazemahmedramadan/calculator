@@ -29,8 +29,8 @@ calc_oprators.forEach(function (oprate) {
       calc_screen.innerHTML = `${value}+`;
     } else if (clicked_oprate == "-") {
       calc_screen.innerHTML = `${value}-`;
-    } else if (clicked_oprate == "*") {
-      calc_screen.innerHTML = `${value}*`;
+    } else if (clicked_oprate == "×") {
+      calc_screen.innerHTML = `${value}×`;
     } else if (clicked_oprate == "/") {
       calc_screen.innerHTML = `${value}/`;
     } else if (oprate.classList.contains("back")) {
